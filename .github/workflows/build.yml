@@ -1,12 +1,22 @@
+name: NODE CONTINUOUS INTEGRATION
+
 on: push
 jobs:
-  first-job:
+  # first-job:
+  build-node:
+    name: Build and run a Node Application
+    # container: windows-latest
     runs-on: ubuntu-latest
     container: node:16
     # container: node:17.6.0-alpine
     steps:
       - run: node --version
+        name: Check the node version
       - run: npm --version
+        name: Check the npm version
       - uses: actions/checkout@v4
+        name: Checkout code from Github
       - run: npm install
+        name: Install NPM packages
       - run: node app.js
+        name: Run Node Application
