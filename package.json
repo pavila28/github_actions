@@ -1,0 +1,7 @@
+{
+  "name": "simple",
+  "main": "index.js",
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}
